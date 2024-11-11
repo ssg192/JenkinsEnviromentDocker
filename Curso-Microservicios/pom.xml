@@ -180,8 +180,8 @@
         <plugin>
             <groupId>org.sonarsource.scanner.maven</groupId>
             <artifactId>sonar-maven-plugin</artifactId>
-    <version>3.15.0.1114</version> <!-- o la versión más reciente disponible -->
-         </plugin>
+    <version>4.0.0.4121</version> <!-- Actualiza a la versión más reciente -->
+             </plugin>
     </plugins>
 </build>
 </project>
