@@ -1,7 +1,7 @@
 pipeline {
     agent any
     tools{
-        maven 'M3_9_9'
+        maven 'M3_8_6'
     }
     stages {
         stage('Dependency Check') {
