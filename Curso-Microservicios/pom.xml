@@ -177,11 +177,11 @@
         </plugin>
 
         <!-- Plugin de SonarQube -->
-      <plugin>
-    <groupId>org.sonarsource.scanner.maven</groupId>
-    <artifactId>sonar-maven-plugin</artifactId>
+        <plugin>
+            <groupId>org.sonarsource.scanner.maven</groupId>
+            <artifactId>sonar-maven-plugin</artifactId>
     <version>3.15.0.1114</version> <!-- o la versión más reciente disponible -->
-</plugin>
-
+         </plugin>
+    </plugins>
 </build>
 </project>
