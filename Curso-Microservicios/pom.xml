@@ -30,8 +30,8 @@
         <springfox.swagger.version>2.9.2</springfox.swagger.version>
         <spring.kafka.version>2.7.2</spring.kafka.version>
         <postgressql.version>42.2.2</postgressql.version>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
         <jacoco.version>0.8.4</jacoco.version>
         <lombok.version>1.18.8</lombok.version>  
         <sonar.dependencyCheck.htmlReportPath>${project.basedir}/dependency-check-report.html</sonar.dependencyCheck.htmlReportPath>
