@@ -150,31 +150,38 @@
         </dependencies>
     </dependencyManagement>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.jacoco</groupId>
-                <artifactId>jacoco-maven-plugin</artifactId>
-                <version>0.8.4</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>prepare-agent</goal>
-                        </goals>
-                    </execution>
-                    <execution>
-                        <id>report</id>
-                        <phase>prepare-package</phase>
-                        <goals>
-                            <goal>report</goal>
-                        </goals>
-                        <configuration>
-                            <outputDirectory>${project.basedir}/target/site/jacoco</outputDirectory>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
-    </build>
+   <build>
+    <plugins>
+        <!-- Plugin de Jacoco para generar informes de cobertura -->
+        <plugin>
+            <groupId>org.jacoco</groupId>
+            <artifactId>jacoco-maven-plugin</artifactId>
+            <version>0.8.4</version>
+            <executions>
+                <execution>
+                    <goals>
+                        <goal>prepare-agent</goal>  <!-- Agrega el agente de Jacoco durante la ejecución de tests -->
+                    </goals>
+                </execution>
+                <execution>
+                    <id>report</id>
+                    <phase>prepare-package</phase>  <!-- Genera el informe en la fase "prepare-package" -->
+                    <goals>
+                        <goal>report</goal>
+                    </goals>
+                    <configuration>
+                        <outputDirectory>${project.basedir}/target/site/jacoco</outputDirectory>  <!-- Ruta donde se generará el informe -->
+                    </configuration>
+                </execution>
+            </executions>
+        </plugin>
 
+        <!-- Plugin de SonarQube -->
+        <plugin>
+            <groupId>org.sonarsource.scanner.maven</groupId>
+            <artifactId>sonar-maven-plugin</artifactId>
+            <version>3.9.1.2184</version>  <!-- Versión compatible -->
+        </plugin>
+    </plugins>
+</build>
 </project>
