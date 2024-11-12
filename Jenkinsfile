@@ -57,7 +57,6 @@ pipeline {
                   }
                 }
             }
-    */
     
      stage('liquibase') {
             steps {
