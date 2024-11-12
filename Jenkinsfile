@@ -4,7 +4,7 @@ pipeline {
         maven 'M3_9_9'
     }
     stages {
-        stage('Dependency Check') {
+         stage('Dependency Check') {
             steps {
                 dir("Curso-Microservicios/"){
                     dependencyCheck additionalArguments: '''
@@ -62,7 +62,7 @@ pipeline {
      stage('liquibase') {
             steps {
                 dir("liquibase/"){
-                  sh 'liquibase --changeLogFile="changesets/db.changelog-master.xml" update'
+                  sh '/opt/liquibase/liquibase --changeLogFile="changesets/db.changelog-master.xml" update'
                 }
             }
       }
