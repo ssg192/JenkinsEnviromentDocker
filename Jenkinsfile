@@ -57,7 +57,7 @@ pipeline {
                   }
                 }
             }
-        }
+    
     
      stage('liquibase') {
             steps {
@@ -66,4 +66,5 @@ pipeline {
                 }
             }
       }
+    }   
 }
