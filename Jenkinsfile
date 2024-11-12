@@ -58,4 +58,12 @@ pipeline {
                 }
             }
         }
-    }
+    
+     stage('liquibase') {
+            steps {
+                dir("liquibase/"){
+                  sh "liquibase --changeLogFile="changesets/db.changelog-master.xml" update"
+                }
+            }
+      }
+}
